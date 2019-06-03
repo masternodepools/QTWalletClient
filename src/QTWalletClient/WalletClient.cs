@@ -13,11 +13,14 @@ namespace QTWalletClient
             => _settings = settings;
 
         public QTResponseModel SendCommand(WalletCommands command)
-            => SendCommand(command, new string[0]);
+            => SendCommand(command.GetValue(), new string[0]);
 
         public QTResponseModel SendCommand(WalletCommands command, params string[] args)
+            => SendCommand(command.GetValue(), args);
+
+        public QTResponseModel SendCommand(string command, params string[] args)
         {
-            var request = new QTRequestModel(command.GetValue(), args);
+            var request = new QTRequestModel(command, args);
             var responseText = SendRequest(request);
             return JsonConvert.DeserializeObject<QTResponseModel>(responseText);
         }
