@@ -18,6 +18,11 @@ var client = new WalletClient(new WalletSettings {
     Password = "SuperSecretPassword1336"
 });
 
+// Get balance
+var balanceResponse = client.SendCommand("getbalance");
+var balance = blockCountResponse.Result;
+Console.WriteLine(balance);
+
 // Get block count
 var blockCountResponse = client.SendCommand(WalletCommands.GetBlockCount);
 var blockCount = blockCountResponse.Result;
@@ -30,4 +35,4 @@ Console.WriteLine(newAddress);
 ```
 
 TODO:
-Add all wallet commands.
+Add wallet commands.
