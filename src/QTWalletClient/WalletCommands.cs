@@ -8,9 +8,7 @@
         private string _value;
 
         private WalletCommands(string val)
-        {
-            _value = val;
-        }
+            => _value = val;
 
         internal string GetValue()
             => _value;
