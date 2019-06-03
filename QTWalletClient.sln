@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QTWalletClient", "src\QTWalletClient\QTWalletClient.csproj", "{4E4CF209-74A5-4855-91A3-2C2E96E7AF8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E4CF209-74A5-4855-91A3-2C2E96E7AF8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E4CF209-74A5-4855-91A3-2C2E96E7AF8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E4CF209-74A5-4855-91A3-2C2E96E7AF8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E4CF209-74A5-4855-91A3-2C2E96E7AF8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56007DC8-A13C-4496-A33E-A907E7FEF764}
+	EndGlobalSection
+EndGlobal
