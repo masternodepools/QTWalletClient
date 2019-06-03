@@ -1,5 +1,5 @@
 # QTWalletClient in C# .Net
-Simple client to communicate with qt-wallets.
+Simple client to communicate with qt-wallets, such as bitcoin-qt.
 
 Example usage:
 
@@ -28,3 +28,6 @@ var addressResponse = client.SendCommand(WalletCommands.GetNewAddress, "someAlia
 var newAddress = addressResponse.Result;
 Console.WriteLine(newAddress);
 ```
+
+TODO:
+Add all wallet commands.
