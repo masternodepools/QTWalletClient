@@ -1,4 +1,4 @@
-# QTWalletClient
+# QTWalletClient in C# .Net
 Simple client to communicate with qt-wallets.
 
 Example usage:
