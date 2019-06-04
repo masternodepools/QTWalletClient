@@ -20,17 +20,17 @@ var client = new WalletClient(new WalletSettings {
 });
 
 // Get balance
-var balanceResponse = await client.SendCommandAsync("getbalance");
+var balanceResponse = await client.SendCommandAsync<float>("getbalance");
 var balance = blockCountResponse.Result;
 Console.WriteLine(balance);
 
 // Get block count
-var blockCountResponse = await client.SendCommandAsync(WalletCommands.GetBlockCount);
+var blockCountResponse = await client.SendCommandAsync<int>(WalletCommands.GetBlockCount);
 var blockCount = blockCountResponse.Result;
 Console.WriteLine(blockCount);
 
 // Get a new wallet address with alias "someAlias"
-var addressResponse = await client.SendCommandAsync(WalletCommands.GetNewAddress, "someAlias");
+var addressResponse = await client.SendCommandAsync<string>(WalletCommands.GetNewAddress, "someAlias");
 var newAddress = addressResponse.Result;
 Console.WriteLine(newAddress);
 ```
