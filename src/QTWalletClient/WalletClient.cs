@@ -21,17 +21,17 @@ namespace QTWalletClient
             _password = settings.Password;
         }
 
-        public async Task<QTResponseModel> SendCommandAsync(WalletCommands command)
-            => await SendCommandAsync(command.GetValue(), new string[0]);
+        public async Task<QTResponseModel<T>> SendCommandAsync<T>(WalletCommands command)
+            => await SendCommandAsync<T>(command.GetValue(), new string[0]);
 
-        public async Task<QTResponseModel> SendCommandAsync(WalletCommands command, params string[] args)
-            => await SendCommandAsync(command.GetValue(), args);
+        public async Task<QTResponseModel<T>> SendCommandAsync<T>(WalletCommands command, params string[] args)
+            => await SendCommandAsync<T>(command.GetValue(), args);
 
-        public async Task<QTResponseModel> SendCommandAsync(string command, params string[] args)
+        public async Task<QTResponseModel<T>> SendCommandAsync<T>(string command, params string[] args)
         {
             var request = new QTRequestModel(command, args);
             var responseText = await SendRequest(request);
-            return JsonConvert.DeserializeObject<QTResponseModel>(responseText);
+            return JsonConvert.DeserializeObject<QTResponseModel<T>>(responseText);
         }
 
         private async Task<string> SendRequest(QTRequestModel request)
